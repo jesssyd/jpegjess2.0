@@ -22,11 +22,9 @@ export async function GET() {
     }
   
     const data = await response.json();
-    console.log("Raw Cloudinary data:", data);
 
+    const filteredImages = data.resources.filter((img: { asset_folder: string; }) => img.asset_folder === folder);
 
-    const filteredImages = data.resources.filter((img: any) => img.asset_folder === folder);
-    console.log("Filtered images:", filteredImages);
   
     return NextResponse.json(filteredImages);
   }
