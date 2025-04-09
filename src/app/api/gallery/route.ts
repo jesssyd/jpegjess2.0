@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 
-const CLOUDINARY_URL = process.env.CLOUDINARY_URL!;
 const API_KEY = process.env.API_KEY!;
 const API_SECRET = process.env.API_SECRET!;
 const CLOUD_NAME = process.env.CLOUD_NAME!;
