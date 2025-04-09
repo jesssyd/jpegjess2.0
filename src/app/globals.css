@@ -1,5 +1,6 @@
+/* @import "tailwindcss/preflight";
+@import "tailwindcss"; */
 @import "tailwindcss";
-@import "tailwindcss/preflight";
 @tailwind utilities;
 
 @import "slick-carousel/slick/slick.css";
@@ -17,7 +18,7 @@ body {
   font-family: var(--font-archivo), sans-serif;
 }
 
-@layer utilities {
+@layer base {
   .page-container {
     @apply lg:mx-32 md:mx-10 mx-5;
     @apply max-w-7xl;
