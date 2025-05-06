@@ -5,7 +5,7 @@ export default function About() {
     <section id="about">
       <div className="section page-container">
         <h2>about me</h2>
-        <div className="md:grid grid-cols-12 md:gap-6 flex flex-col gap-3">
+        <div className="md:grid grid-cols-12 md:gap-6 flex flex-col">
           <div className="col-span-4">
             <p>
               I’m a third year double degree Business Administration and

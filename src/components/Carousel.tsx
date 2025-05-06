@@ -5,6 +5,7 @@ import Image from "next/image";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { ChevronRight, ChevronLeft } from "lucide-react";
 
 interface ArrowProps {
   className?: string;
@@ -24,13 +25,7 @@ interface Image {
 function NextArrow({ className, onClick }: ArrowProps) {
   return (
     <div className={className} onClick={onClick}>
-      <Image
-        src="https://res.cloudinary.com/dgqefab9k/image/upload/v1744078955/chevronRight_akhzp4.svg"
-        alt="Next"
-        width={50}
-        height={50}
-        className="h-full"
-      ></Image>
+      <ChevronRight size={20} strokeWidth={1.5} color="#000000" className="md:size-7 lg:size-9" />
     </div>
   );
 }
@@ -38,13 +33,7 @@ function NextArrow({ className, onClick }: ArrowProps) {
 function PrevArrow({ className, onClick }: ArrowProps) {
   return (
     <div className={className} onClick={onClick}>
-      <Image
-        src="https://res.cloudinary.com/dgqefab9k/image/upload/v1744078955/chevronLeft_msdihg.svg"
-        alt="Previous"
-        width={50}
-        height={50}
-        className="h-full"
-      ></Image>
+     <ChevronLeft size={20} color="#000000" strokeWidth={1.5} className="flex justify-center md:size-7 lg:size-9"/>
     </div>
   );
 }
@@ -75,7 +64,7 @@ function Slides() {
 
   // if (!images.length) return <p>Loading gallery...</p>;
   return (
-    <div className="slider-container col-start-2 col-span-4 lg:col-start-2 lg:col-span-10">
+    <div className="slider-container col-start-2 col-span-4 lg:col-start-2 lg:col-span-10 2xl:col-start-2 2xl:col-span-10">
       <Slider {...settings}>
         {images.map((img) => (
           <Image
@@ -84,7 +73,7 @@ function Slides() {
             alt={img.public_id}
             width={img.width}
             height={img.height}
-            className="rounded"
+            className=""
           />
         ))}
       </Slider>
@@ -96,7 +85,7 @@ export default function Carousel() {
   return (
     <section id="gallery">
       <div className="section page-container columns ">
-        <h2 className="col-start-2 col-span-4 lg:col-start-2 lg:col-span-10">
+        <h2 className="col-start-2 col-span-4 lg:col-start-2 lg:col-span-10 2xl:col-start-2 2xl:col-span-10">
           gallery
         </h2>
         <Slides />

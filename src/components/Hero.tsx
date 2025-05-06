@@ -14,7 +14,6 @@ export default function Hero() {
         </div>
         <div className="lg:col-span-4 col-span-2 lg:col-start-9 col-start-5">
           <Image src="https://res.cloudinary.com/dgqefab9k/image/upload/v1744078961/heroImage_w1a3ym.jpg" alt="Hero Image of Jessica Tidd" width="500" height="500" className="object-fit"></Image>
-          {/* <img src={heroImage} alt="Jessica Tidd" /> */}
         </div>
       </div>
     </section>

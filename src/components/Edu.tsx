@@ -18,11 +18,7 @@ export default function Edu() {
           <h2>education</h2>
           <div className="lg:grid grid-cols-2 lg:gap-6 lg:items-end flex flex-col flex-wrap justify-end gap-3">
             <div>
-              <p>Bachelor of Business Administration</p>
-              <p className="caption">Wilfrid Laurier University | 2027</p>
-            </div>
-            <div>
-              <p>Bachelor of Science, Computer Science</p>
+              <p>Bachelor of Business Administration & Bachelor of Science (Computer Science)</p>
               <p className="caption">Wilfrid Laurier University | 2027</p>
             </div>
           </div>

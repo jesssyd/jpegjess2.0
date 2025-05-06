@@ -34,8 +34,12 @@ body {
     @apply lg:my-32 md:my-28 my-16;
   }
 
-  .galleryImage {
+  .gallery-image {
     @apply md:mb-6 mb-3;
+  }
+
+  img {
+    @apply drop-shadow-xl;
   }
 
   h1 {
@@ -49,7 +53,7 @@ body {
 
   p,
   a {
-    @apply md:text-base text-xs;
+    @apply text-sm;
     @apply md:py-0 pt-1;
   }
 
@@ -63,17 +67,24 @@ body {
   }
 
   .slick-next {
-    @apply lg:-right-9! md:-right-6! hidden;
+    @apply lg:-right-11! md:-right-8! hidden;
   }
 
   .slick-prev {
-    @apply lg:-left-9! md:-left-6! hidden;
+    @apply lg:-left-11! md:-left-8! hidden;
   }
 
   .slick-prev:before,
   .slick-next:before {
     @apply hidden;
   }
+
+  .slick-arrow {
+    width: auto !important;
+    height: auto !important;
+    @apply flex justify-center;
+  }
+
 
   .slick-slide {
     @apply overflow-hidden;
@@ -84,4 +95,16 @@ body {
     @apply flex;
     @apply overflow-hidden;
   }
+
+  .nav-link {
+    @apply pb-1;
+  }
+  .nav-link:hover, .nav-links a:hover {
+    @apply transition-transform duration-100 hover:scale-110
+  }
+
+  .hamburger-menu {
+    @apply transition-opacity duration-400;
+  }
+
 }
