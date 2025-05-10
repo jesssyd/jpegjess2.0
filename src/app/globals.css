@@ -85,7 +85,6 @@ body {
     @apply flex justify-center;
   }
 
-
   .slick-slide {
     @apply overflow-hidden;
     @apply max-w-full;
@@ -99,8 +98,9 @@ body {
   .nav-link {
     @apply pb-1;
   }
+
   .nav-link:hover, .nav-links a:hover {
-    @apply transition-transform duration-100 hover:scale-110
+    @apply transition-transform duration-100;
   }
 
   .hamburger-menu {

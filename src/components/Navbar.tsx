@@ -8,18 +8,18 @@ export function NavLinks() {
       <Link href="/" className="nav-link">
         home
       </Link>
-      <Link href="/#about" className="nav-link">
+      {/* <Link href="/#about" className="nav-link">
         about
-      </Link>
+      </Link> */}
       <Link href="/galleryPage" className="nav-link">
         gallery
       </Link>
       <Link href="/projectsPage" className="nav-link">
         projects
       </Link>
-      <Link href="/#contact" className="nav-link">
-        get in touch
-      </Link>
+      {/* <Link href="/#contact" className="nav-link">
+        contact
+      </Link> */}
     </>
   );
 }
