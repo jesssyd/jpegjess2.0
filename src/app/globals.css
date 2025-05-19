@@ -22,7 +22,8 @@ body {
   .page-container {
     @apply lg:mx-32 md:mx-10 mx-5;
     @apply max-w-7xl;
-    @apply min-w-2xs;
+    /* @apply min-w-3xs; */
+    /* @apply min-w-2xs; */
   }
 
   .columns {
@@ -43,7 +44,7 @@ body {
   }
 
   h1 {
-    @apply lg:text-8xl md:text-6xl text-5xl;
+    @apply lg:text-8xl md:text-6xl sm:text-5xl text-3xl;
   }
 
   h2 {
