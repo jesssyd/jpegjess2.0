@@ -1,17 +1,28 @@
 "use client";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
 import { Menu, X } from "lucide-react";
-export function NavLinks() {
+
+interface NavLinksProps {
+  closeMenu?: () => void;
+}
+
+export function NavLinks({ closeMenu }: NavLinksProps){
+  const handleClick = (e: MouseEvent<HTMLAnchorElement>): void => {
+    if (closeMenu) {
+      closeMenu();
+    }
+  };
+
   return (
     <>
-      <Link href="/" className="nav-link">
+      <Link href="/" className="nav-link" onClick={handleClick}>
         home
       </Link>
-      <Link href="/galleryPage" className="nav-link">
+      <Link href="/galleryPage" className="nav-link" onClick={handleClick}>
         gallery
       </Link>
-      <Link href="/projectsPage" className="nav-link">
+      <Link href="/projectsPage" className="nav-link" onClick={handleClick}>
         projects
       </Link>
       {/* <Link href="/#contact" className="nav-link">
@@ -22,15 +33,21 @@ export function NavLinks() {
 }
 
 export function Nav() {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleMenu = () => {
+  const [isOpen, setIsOpen] = useState<boolean>(false);
+  
+  const toggleMenu = (): void => {
     setIsOpen(!isOpen);
   };
+  
+  const closeMenu = (): void => {
+    setIsOpen(false);
+  };
+
   return (
     <>
       <nav className="lg:col-span-7 lg:col-start-6 md:col-span-4 md:col-start-3 -col-start-1">
         <div className="nav-links md:flex justify-between hidden">
-          <NavLinks />
+          <NavLinks closeMenu={closeMenu} />
         </div>
         <div>
           <button
@@ -45,9 +62,8 @@ export function Nav() {
             )}
           </button>
         </div>
-        
         <div className={`hamburger-menu lg:px-32 md:px-10 px-5 fixed top-auto z-[20] bg-white left-0 w-full flex h-screen flex-col md:hidden items-center justify-center col-span-full pb-5 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"}`}>
-            <NavLinks />
+          <NavLinks closeMenu={closeMenu} />
         </div>
       </nav>
     </>
