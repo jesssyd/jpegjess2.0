@@ -8,21 +8,16 @@ interface NavLinksProps {
 }
 
 export function NavLinks({ closeMenu }: NavLinksProps){
-  const handleClick = (e: MouseEvent<HTMLAnchorElement>): void => {
-    if (closeMenu) {
-      closeMenu();
-    }
-  };
 
   return (
     <>
-      <Link href="/" className="nav-link" onClick={handleClick}>
+      <Link href="/" className="nav-link" onClick={closeMenu}>
         home
       </Link>
-      <Link href="/galleryPage" className="nav-link" onClick={handleClick}>
+      <Link href="/galleryPage" className="nav-link" onClick={closeMenu}>
         gallery
       </Link>
-      <Link href="/projectsPage" className="nav-link" onClick={handleClick}>
+      <Link href="/projectsPage" className="nav-link" onClick={closeMenu}>
         projects
       </Link>
       {/* <Link href="/#contact" className="nav-link">
