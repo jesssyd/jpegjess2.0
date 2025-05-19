@@ -8,9 +8,6 @@ export function NavLinks() {
       <Link href="/" className="nav-link">
         home
       </Link>
-      {/* <Link href="/#about" className="nav-link">
-        about
-      </Link> */}
       <Link href="/galleryPage" className="nav-link">
         gallery
       </Link>
